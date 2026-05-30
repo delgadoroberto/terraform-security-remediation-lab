@@ -1,0 +1,9 @@
+#!/home/robertod/Cyber_Projects/git_projects/devsecops-labs/terragoat/venv/bin/python3
+from checkov.main import Checkov
+import warnings
+import sys
+
+if __name__ == '__main__':
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", category=SyntaxWarning)
+        sys.exit(Checkov().run())
