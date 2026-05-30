@@ -1,0 +1,28 @@
+name: Checkov Strict Scan
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checkov:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Checkov scan
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: .
+          soft_fail: false   # Pipeline fallará si hay vulnerabilidades
+          output: json       # Genera reporte JSON
+          quiet: false
+          framework: terraform
+
+      - name: Upload Checkov report
+        uses: actions/upload-artifact@v3
+        with:
+          name: checkov-report
+          path: checkov_report.json
