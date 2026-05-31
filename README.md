@@ -623,3 +623,46 @@ If you need direct support you can contact us at [info@bridgecrew.io](mailto:inf
 
 ---
 
+---
+
+# Roberto Delgado - DevSecOps Practice Notes
+
+## Objectives
+
+- Practice Infrastructure as Code (IaC) security assessments
+- Identify and remediate Terraform misconfigurations
+- Improve cloud security and DevSecOps skills
+- Compare findings from different security scanners
+- Implement security controls through GitHub Actions
+- Build hands-on experience with vulnerability remediation
+
+## Tools Used
+
+- Terraform
+- Checkov
+- Semgrep
+- GitHub Actions
+
+## Current Status
+
+- [x] Repository initialized
+- [x] GitHub Actions configured
+- [x] Checkov baseline scan completed
+- [ ] Findings triage in progress
+- [ ] Vulnerability remediation in progress
+
+## Training Workflow
+
+1. Execute security scans
+2. Review findings
+3. Apply Terraform remediations
+4. Validate fixes
+5. Commit changes
+6. Re-run security scans
+7. Document lessons learned
+
+## Disclaimer
+
+This repository is intended for cybersecurity training and educational purposes only.
+
+The vulnerable configurations included in this project are used exclusively to practice security analysis and remediation techniques.
